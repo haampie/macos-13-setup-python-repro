@@ -1,0 +1,12 @@
+# run tmate on macos-13 gha runner
+
+name: example
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: macos-13
+    steps:
+    - name: Run tmate
+      uses: mxschmitt/action-tmate@v3

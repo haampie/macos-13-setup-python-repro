@@ -5,6 +5,7 @@ on: [push]
 jobs:
   build:
     strategy:
+      fail-fast: false
       matrix:
         python-version: ["3.7.16", "3.7.17"]
     runs-on: macos-13

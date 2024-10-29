@@ -8,5 +8,8 @@ jobs:
   build:
     runs-on: macos-13
     steps:
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.7.17'
     - name: Run tmate
       uses: mxschmitt/action-tmate@v3

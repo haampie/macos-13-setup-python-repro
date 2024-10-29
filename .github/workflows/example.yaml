@@ -6,10 +6,12 @@ on: [push]
 
 jobs:
   build:
+    strategy:
+      matrix:
+        python-version: ["3.6", "3.7"]
     runs-on: macos-13
     steps:
     - uses: actions/setup-python@v5
       with:
-        python-version: '3.7.17'
-    - name: Run tmate
-      uses: mxschmitt/action-tmate@v3
+        python-version: ${{ matrix.python-version }}
+    - run: python -c 'import readline'
